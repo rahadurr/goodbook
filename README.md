@@ -6,4 +6,5 @@ After clone the repository follow these instructions.
 ```sh
 rails db:create
 rails db:migrate
+rails db:seed
 ```
