@@ -1,0 +1,13 @@
+<div class="row">
+  <% @categories.each do |category| %>
+    <div class="col-6 col-md-3">
+      <%= link_to category, class: 'text-decoration-none' do %>
+          <div class="card border-0 mb-3 shadow-sm p-3">
+            <div class="card-body">
+              <h6 class="text-center"><%= category.title %></h6>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

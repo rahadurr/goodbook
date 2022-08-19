@@ -24,6 +24,9 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# An awesome nested set implementation for Active Record
+gem 'awesome_nested_set', '~> 3.5'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
