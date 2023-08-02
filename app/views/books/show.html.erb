@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4">
+            <img src="https://via.placeholder.com/400x500" alt="" class="img-fluid">
+            <%= link_to 'Write Book', editor_path(@book), class: 'btn btn-primary' %>
+          </div>
+          <div class="col-8">
+            <h4> <%= @book.title %> </h4>
+            <p class="mt-4"><%= @book.description %></p>
+            <ul>
+              <% @book.chapters.each do |chapter| %>
+                <li><%= chapter.title %></li>
+              <% end %>
+            </ul>
+
+            <% @book.parts.each do |part| %>
+              <p><%= part.title %></p>
+              <ul>
+                <% part.chapters.each do |chapter| %>
+                  <li><%= chapter.title %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

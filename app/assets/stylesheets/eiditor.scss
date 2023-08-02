@@ -1,0 +1,35 @@
+.container-fluid {
+  height: 100%;
+
+  .sidenav {
+    height: 100%;
+    width: 256px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E6E6E6;
+    overflow-x: hidden;
+    border-right: 1px solid #E7E6F7;
+    transition: 0.5s;
+
+    .nav-header {
+      padding: 8px;
+      text-align: center;
+      color: #ffffff;
+      background-color: #7389AE;
+
+    }
+  }
+
+  i.bi {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .main {
+    margin-left: 256px;
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+}
