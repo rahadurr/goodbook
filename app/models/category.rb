@@ -1,5 +1,6 @@
 class Category < ApplicationRecord
   acts_as_nested_set
+  has_many :books
   before_create :assign_slug
 
   def assign_slug

@@ -1,6 +1,29 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./multiple-select.min";
 
 html, body {
   font-size: 14px;
   background: #f1f2f9;
+}
+
+select {
+  width: 100%;
+}
+
+.ms-parent {
+  .ms-choice {
+    border-color: #ced4da;
+    height: 36px;
+    padding: 0 8px;
+    span {
+      position: relative;
+    }
+    .placeholder {
+      background: transparent;
+    }
+  }
+
+  .ms-search input {
+    padding: 8px;
+  }
 }

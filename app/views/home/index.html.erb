@@ -1,2 +1,61 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://via.placeholder.com/1500x500" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1500x500" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1500x500" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-6">
+    <h2>Popular Books</h2>
+  </div>
+  <div class="col-6">
+    <%= link_to 'New book', new_book_path, class: 'btn btn-primary float-end' %>
+  </div>
+</div>
+
+<!--Books-->
+<div class="row mt-3">
+  <% @books.each do |book| %>
+    <div class="col-4 col-md-2 col-lg-2">
+      <%= link_to book, class: 'text-decoration-none' do %>
+        <div class="card border-0 shadow-sm ">
+          <img src="https://via.placeholder.com/150x150" alt="">
+          <div class="card-body">
+            <div class="text-dark"><%= book.title %></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<!--Categories-->
+
+<div class="row mt-5">
+  <div class="col-12">
+    <h2>Categories</h2>
+  </div>
+</div>
+
+
+<div class="row mt-3">
+  <% @categories.each do |category| %>
+    <div class="col-4 col-md-2 col-lg-2">
+      <%= link_to category, class:'text-decoration-none' do %>
+        <div class="card border-0 shadow-sm mb-3 p-2">
+          <div class="card-body">
+            <h6 class="text-center text-dark"><%= category.title %></h6>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

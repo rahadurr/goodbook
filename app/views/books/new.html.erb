@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3">
+    <div class="card border-0 shadow-sm">
+      <div class="card-body p-3">
+        <%= form_with model: @book do |f| %>
+
+          <div class="mt-3">
+            <%= f.label :title, class: 'form-label'  %>
+            <%= f.text_field :title, placeholder: 'Book title', class: 'form-control' %>
+          </div>
+
+          <div class="mt-3">
+            <%= f.label :isbn, class: 'form-label text-uppercase'  %>
+            <%= f.text_field :isbn, placeholder: 'ISBN', class: 'form-control' %>
+          </div>
+
+          <div class="mt-3">
+            <%= f.label :description, class: 'form-label'  %>
+            <%= f.text_area :description, placeholder: 'Book description', class: 'form-control' %>
+          </div>
+
+          <div class="mt-3">
+            <%= f.label 'Categories', class: 'form-label'  %>
+            <%= f.select :category_ids,
+                         nested_set_options(Category) {|i| "#{'-' * i.level } #{i.title}" },
+                         { include_hidden: false }, { multiple: true } %>
+          </div>
+
+          <div class="my-4">
+            <%= f.submit 'Create Book', class: 'btn btn-primary' %>
+          </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
